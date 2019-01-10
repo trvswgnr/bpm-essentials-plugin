@@ -1,8 +1,3 @@
-<!-- DEV: check the value of an option through JS console -->
-<script>
-console.log("<?php echo get_option('utility'); ?>");
-</script>
-
 <?php
 // create custom plugin settings menu
 add_action('admin_menu', 'bpm_essentials_plugin_create_menu');
