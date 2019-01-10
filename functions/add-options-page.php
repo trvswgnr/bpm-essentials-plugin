@@ -18,6 +18,7 @@ function register_bpm_essentials_plugin_settings() {
 	register_setting( 'bpm-plugin-settings-group', 'remove_head_junk' );
 	register_setting( 'bpm-plugin-settings-group', 'remove_autoformatting' );
 	register_setting( 'bpm-plugin-settings-group', 'remove_editors' );
+	register_setting( 'bpm-plugin-settings-group', 'slick_carousel' );
 	register_setting( 'bpm-plugin-settings-group', 'utility' );
 }
 
@@ -72,9 +73,17 @@ function bpm_essentials_plugin_settings_page() {
         </tr>
 
         <tr valign="top">
+					<th scope="row">Add Slick Carousel</th>
+					<td>
+						<input type="checkbox" id="slick_carousel" name="slick_carousel"  value="1"<?php checked( 1 == get_option('slick_carousel',0) ); ?>  />
+						<span for="slick_carousel">Adds the Slick Carousel. Documentation: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></span>
+					</td>
+        </tr>
+
+        <tr valign="top">
 					<th scope="row">Enable Utility Functions</th>
 					<td>
-						<input type="checkbox" id="utility" name="utility"  value="1"<?php checked( 1 == get_option('utility',1) ); ?>  />
+						<input type="checkbox" id="utility" name="utility"  value="1"<?php checked( 1 == get_option('utility',1) ); ?> />
 						<span for="utility">Enables useful utility functions for use in themes, like <code>formatPhoneNumber()</code>.</span>
 					</td>
         </tr>

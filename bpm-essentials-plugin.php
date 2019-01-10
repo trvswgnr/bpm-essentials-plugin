@@ -32,6 +32,10 @@ if (get_option('remove_editors')) {
 	bpm_include('remove-editors');
 }
 
+if (get_option('slick_carousel')) {
+	bpm_include('add-slick-carousel');
+}
+
 if (get_option('utility')) {
 	bpm_include('add-utility');
 }
