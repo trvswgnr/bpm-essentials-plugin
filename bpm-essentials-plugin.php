@@ -7,10 +7,9 @@ Version: 1.0
 Author: Travis Wagner
 Author URI: http://travisaw.com
 */
-
-// function to include function partials
 function bpm_include($filename) {
   return require_once( dirname( __FILE__ ) . '/functions/' . $filename . '.php' );
+	// helper functions to include partials
 }
 
 if (get_option('custom_jquery')) {
