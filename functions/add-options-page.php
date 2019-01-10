@@ -40,7 +40,7 @@ function bpm_essentials_plugin_settings_page() {
 					<th scope="row">Enable Updated jQuery</th>
 					<td>
 						<input type="checkbox" name="custom_jquery" id="custom_jquery"  value="1"<?php checked( 1 == get_option('custom_jquery',1) ); ?>  />
-						<label for="custom_jquery">Replaces the outdated WP jQuery with a newer, more compatible version.</label>
+						<span for="custom_jquery">Replaces the outdated WP jQuery with a newer, more compatible version.</span>
 					</td>
         </tr>
 
@@ -48,28 +48,40 @@ function bpm_essentials_plugin_settings_page() {
 					<th scope="row">Enable SVG Upload Support</th>
 					<td>
 						<input type="checkbox" name="svg_upload_support" id="svg_upload_support" value="1"<?php checked( 1 == get_option('svg_upload_support',0) ); ?>  />
-						<label for="svg_upload_support">Allows uploading of SVG through the WP Media Uploader</label>
+						<span for="svg_upload_support">Allows uploading of SVG through the WP Media Uploader.</span>
 					</td>
         </tr>
 
 				<tr valign="top">
 					<th scope="row">Remove Head Junk</th>
-					<td><input type="checkbox" name="remove_head_junk"  value="1"<?php checked( 1 == get_option('remove_head_junk',1) ); ?>  /></td>
+					<td>
+						<input type="checkbox" id="remove_head_junk" name="remove_head_junk"  value="1"<?php checked( 1 == get_option('remove_head_junk',1) ); ?>  />
+      			<span for="remove_head_junk">Removes WP generator, feed links, and other extraneous things from the <code>&lt;head&gt;</code> tag.</span>
+					</td>
         </tr>
 
 				<tr valign="top">
 					<th scope="row">Remove Autoformatting</th>
-					<td><input type="checkbox" name="remove_autoformatting"  value="1"<?php checked( 1 == get_option('remove_autoformatting',0) ); ?>  /></td>
+					<td>
+						<input type="checkbox" id="remove_autoformatting" name="remove_autoformatting"  value="1"<?php checked( 1 == get_option('remove_autoformatting',0) ); ?>  />
+					<span for="remove_autoformatting">Stops WordPress from wrapping everything in <code>&lt;p&gt;</code> tags. Also turns off <code>wptexturize()</code>, which automatically styles quotes and other text. <strong>Not tested with Gutenberg.</strong></span>
+				 </td>
         </tr>
 
         <tr valign="top">
-					<th scope="row">Remove Gutenburg/WYSIWYG Editors</th>
-					<td><input type="checkbox" name="remove_editors"  value="1"<?php checked( 1 == get_option('remove_editors',0) ); ?>  /></td>
+					<th scope="row">Remove Editors</th>
+					<td>
+						<input type="checkbox" id="remove_editors" name="remove_editors"  value="1"<?php checked( 1 == get_option('remove_editors',0) ); ?>  />
+						<span for="remove_editors">Disables the main content Gutenberg or WYSIWYG editor. Useful if using all custom fields.</span>
+					</td>
         </tr>
 
         <tr valign="top">
 					<th scope="row">Enable Utility Functions</th>
-					<td><input type="checkbox" name="utility"  value="1"<?php checked( 1 == get_option('utility',1) ); ?>  /></td>
+					<td>
+						<input type="checkbox" id="utility" name="utility"  value="1"<?php checked( 1 == get_option('utility',1) ); ?>  />
+						<span for="utility">Enables useful utility functions for use in themes, like <code>formatPhoneNumber()</code>.</span>
+					</td>
         </tr>
 <!--
         <tr valign="top">
