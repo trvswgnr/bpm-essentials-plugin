@@ -17,7 +17,7 @@ function register_bpm_essentials_plugin_settings() {
 	register_setting( 'bpm-plugin-settings-group', 'svg_upload_support' );
 	register_setting( 'bpm-plugin-settings-group', 'remove_head_junk' );
 	register_setting( 'bpm-plugin-settings-group', 'remove_autoformatting' );
-	register_setting( 'bpm-plugin-settings-group', 'remove_editors' );
+	register_setting( 'bpm-plugin-settings-group', 'remove_gutenberg' );
 	register_setting( 'bpm-plugin-settings-group', 'slick_carousel' );
 	register_setting( 'bpm-plugin-settings-group', 'utility' );
 }
@@ -65,10 +65,10 @@ function bpm_essentials_plugin_settings_page() {
         </tr>
 
         <tr valign="top">
-					<th scope="row">Remove Editors</th>
+					<th scope="row">Remove Gutenberg</th>
 					<td>
-						<input type="checkbox" id="remove_editors" name="remove_editors"  value="1"<?php checked( 1 == get_option('remove_editors',0) ); ?>  />
-						<span for="remove_editors">Disables the main content Gutenberg or WYSIWYG editor. Useful if using all custom fields.</span>
+						<input type="checkbox" id="remove_gutenberg" name="remove_gutenberg"  value="1"<?php checked( 1 == get_option('remove_gutenberg',0) ); ?>  />
+						<span for="remove_gutenberg">Disables the Gutenberg block editor in favor of the classic WYSIWYG.</span>
 					</td>
         </tr>
 

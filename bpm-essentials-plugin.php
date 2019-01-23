@@ -28,8 +28,8 @@ if (get_option('remove_autoformatting')) {
 	bpm_include('remove-autoformatting');
 }
 
-if (get_option('remove_editors')) {
-	bpm_include('remove-editors');
+if (get_option('remove_gutenberg')) {
+	bpm_include('remove-gutenberg');
 }
 
 if (get_option('slick_carousel')) {
