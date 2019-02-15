@@ -5,6 +5,11 @@ foreach ( array( 'the_content', 'the_title', 'the_excerpt' ) as $hook ) {
   remove_filter( $hook, 'wpautop' );
 }
 
+function remove_empty_p_tags() {
+    echo "<script>jQuery('p:empty').remove();</script>";
+}
+add_action('wp_footer','remove_empty_p_tags',99);
+
 // stop tinyMCE from reformatting html
 function change_mce_options($init){
 		$opts = '*[*]';
