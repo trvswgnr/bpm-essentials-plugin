@@ -19,6 +19,7 @@ function register_bpm_essentials_plugin_settings() {
 	register_setting( 'bpm-plugin-settings-group', 'remove_autoformatting' );
 	register_setting( 'bpm-plugin-settings-group', 'remove_gutenberg' );
 	register_setting( 'bpm-plugin-settings-group', 'slick_carousel' );
+	register_setting( 'bpm-plugin-settings-group', 'add_select2' );
 	register_setting( 'bpm-plugin-settings-group', 'utility' );
 }
 
@@ -77,6 +78,14 @@ function bpm_essentials_plugin_settings_page() {
             <td>
                 <input type="checkbox" id="slick_carousel" name="slick_carousel"  value="1"<?php checked( 1 == get_option('slick_carousel',0) ); ?>  />
                 <span for="slick_carousel">Adds the Slick Carousel. Documentation: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></span>
+            </td>
+        </tr>
+
+        <tr valign="top">
+            <th scope="row">Add Select2</th>
+            <td>
+                <input type="checkbox" id="add_select2" name="add_select2"  value="1"<?php checked( 1 == get_option('add_select2',0) ); ?>  />
+                <span for="add_select2">Adds Select2. Documentation: <a href="https://select2.org/">https://select2.org/</a></span>
             </td>
         </tr>
 
