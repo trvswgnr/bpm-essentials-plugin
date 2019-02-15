@@ -1,10 +1,14 @@
 <?php
 function shortcode_cta($atts, $content = null) {
-	$opts = shortcode_atts(array(
-		'background' => 'blue',
-        'button' => true
+	$atts = shortcode_atts(array(
+		'class' => '',
+        'button' => 'Learn More',
 	), $atts);
-    return '<div class="cta" background="'.$opts['background'].'">' . do_shortcode($content) . '</div>';
+    $html = '<div class="cta" class="' . $atts['class'] . '">'
+        . do_shortcode($content)
+        . ($atts['button'] != "false" ? '<p><button>' . $atts['button'] . '</button></p>' : '');
+    $html .= '</div>'; // .cta
+    return $html;
 }
 add_shortcode('cta', 'shortcode_cta');
 ?>
